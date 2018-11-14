@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style='float:left; text-align:justify; width:500px; padding-top:16px;'>
+    [Website name here] was built using:
+    <br><br>
+    <div style = 'padding-left:20px'>
+        <li>
+            <a href = 'https://github.com/tjkessler/ECNet'>
+                ECNet
+            </a>
+        </li>
+    </div>
+    <div style = 'padding-left:20px'>
+        <li>
+            <a href = 'https://jcheminf.biomedcentral.com/'>
+                Open Babel
+            </a>
+        </li>
+    </div>
+    <div style = 'padding-left:20px'>
+        <li>
+            <a href = 'https://onlinelibrary.wiley.com/doi/abs/10.1002/jcc.21707'>
+                PaDEL-Descriptor
+            </a>
+        </li>
+    </div>
+    <p>
+        SMILES codes for given molecules are converted to MDL Molfiles using Open Babel,
+        molecular descriptors and fingerprints are calculated using PaDEL-Descriptor,
+        and quantitative structure-property relational models (neural networks) are utilized
+        to approximate cetane number.
+        <br><br>
+        To cite this tool, use ECNet as a reference.
+    </p>
+</div>
+
+{% endblock %}

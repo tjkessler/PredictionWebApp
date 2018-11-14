@@ -1,0 +1,12 @@
+Dear {{ email }},
+
+Your prediction results are outlined below:
+
+SMILES Predicted Experimental
+-----------------------------
+{% for result in results %}
+{{ result[0] }} {{ result[1] }} {{ result[2] }}
+{% endfor %}
+
+Sincerely,
+The UML ECRL Team
