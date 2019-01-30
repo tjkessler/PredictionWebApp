@@ -9,22 +9,13 @@ Open Babel
 Java Runtime Environment
 
 ## Python Package requirements:
-flask
-
-flask-wtf
-
-flask-sqlalchemy
-
-flask-migrate
-
-flask-login
-
-flask-mail
-
-pyjwt
-
-python-dotenv
-
-wfastcgi
-
-ecnet
+- flask
+- flask-wtf
+- flask-sqlalchemy
+- flask-migrate
+- flask-login
+- flask-mail
+- pyjwt
+- python-dotenv
+- wfastcgi
+- ecnet 1.7
