@@ -18,4 +18,4 @@ Java Runtime Environment
 - pyjwt
 - python-dotenv
 - wfastcgi
-- ecnet 1.7
+- ecnet 1.6
