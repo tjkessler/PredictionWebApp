@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+
+        <link rel = 'shortcut icon' href = '{{ url_for('static',
+        filename='images/favicon.ico') }}'>
+
+        <link rel = 'stylesheet' type = 'text/css'
+        href = '{{ url_for('static', filename='css/stylesheet.css') }}'>
+        
+        {% if title %}
+            <title>
+                UML ECRL - {{ title }}
+            </title>
+        {% else %}
+            <title>
+                UML ECRL
+            </title>
+        {% endif %}
+
+    </head>
+    
+    <body>
+
+        <div class = 'nav_bar'>
+            <div class = 'nav_content'>
+                <div class = 'nav_link_left'>
+                    <a href = '{{ url_for('index') }}'>
+                        Home
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class = 'content_area'>
+
+            <div class = 'header_pane'>
+
+            </div>
+            
+            <div class = 'top_page_buffer'>
+
+            </div>
+        
+            <div class = 'content_pane'>
+
+                <div class = 'content_header'>
+                    <a href = 'https://faculty.uml.edu/Hunter_Mack/'>
+                        <img src = '{{ url_for('static', style = 'float:left;',
+                        filename='images/uml-ecrl.png') }}'>
+                    </a>
+                </div>
+                
+                <div class = 'content_content'>
+                    <div class = 'publication_column'>
+                        <div style = 'text-align:center;'>
+                            Publications:
+                        </div>
+                        <div style = 'padding-top:15px; text-align:justify; font-size:13px;'>
+                            <li>
+                                <a href = 'http://joss.theoj.org/papers/10.21105/joss.00401'>
+                                    ECNet: Large scale machine learning projects for fuel property prediction
+                                </a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href = 'http://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=2665060'>
+                                    Application of a Rectified Linear Unit (ReLU) Based Artificial Neural Network to Cetane Number
+                                </a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href = 'http://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=2589979'>
+                                    Predicting the Cetane Number of Furanic Biofuel Candidates Using an Improved Artificial
+                                </a>
+                            </li>
+                            <br>
+                            <li>
+                                <a href = 'https://www.sciencedirect.com/science/article/pii/S0016236117307068?via%3Dihub'>
+                                    Artificial neural network based predictions of cetane number for furanic biofuel additives
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                    {% block content %}
+                    {% endblock %}
+                </div>
+
+            </div>
+            
+        </div>
+
+    </body>
+
+</html>

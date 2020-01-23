@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+
+    <form action = '{{ url_for('index') }}' method = 'post' novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token }}
+        <p>
+            {{ form.smiles.label }}
+            <br><br>
+            {{ form.smiles(rows='1', cols='200', style='resize:none') }}
+            <br>
+            {{ form.prop }}
+            {{ form.submit()}}
+            <br>
+            {% for error in form.smiles.errors %}
+                <span style = 'color:red;'>
+                    {{ error }}
+                </span>
+            {% endfor %}
+        </p>
+    </form>
+
+    <p>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>
+                    {{ message }}
+                </p>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </p>
+
+</div>
+
+{% endblock %}

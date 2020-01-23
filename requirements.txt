@@ -1,0 +1,6 @@
+Flask
+Flask-WTF
+Werkzeug
+WTForms
+gunicorn
+ecpredict==0.1.0
