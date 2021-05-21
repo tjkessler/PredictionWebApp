@@ -3,5 +3,5 @@ Flask-WTF
 Werkzeug
 WTForms
 gunicorn
-tensorflow==2.0.0b1
+tensorflow==2.5.0rc0
 ecpredict==0.1.0
